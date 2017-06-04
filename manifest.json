@@ -1,15 +1,12 @@
 {
-  "manifest_version": 1,
+  "manifest_version": 2,
 
   "name": "WikiRead",
   "description": "This extension allows you to customize how Wikipedia's text is displayed so as to improve readability",
   "version": "1.0",
 
-  "browser_action": {
-
-  },
-
-  "permissions": [
-    "https://*.wikipedia.org/wiki/*"
-  ]
+  "content_scripts": [{
+    "css": ["styles.css"],
+    "matches": ["https://*.wikipedia.org/wiki/*"]
+  }]
 }
